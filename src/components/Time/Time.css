@@ -1,0 +1,18 @@
+.time {
+    text-align: center;
+    padding: 32px;
+
+    .nome {
+        font-size: 32px;
+        display: inline-block;
+        border-bottom: 4px solid;
+    }
+
+    .cards-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        flex: wrap;
+    }
+}
