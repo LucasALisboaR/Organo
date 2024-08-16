@@ -1,6 +1,6 @@
     .card {
         width: 260px;
-        height: 270px;
+        min-height: 270px;
         border-radius: 10px;
     }
 
@@ -26,6 +26,7 @@
     }
 
     .deletar {
+        margin: 10px 0;
         width: 90%;
         border: none;
         border-radius: 10px;
@@ -37,6 +38,5 @@
         
         &:hover{
             font-size: 20px;
-    
         }
     }
