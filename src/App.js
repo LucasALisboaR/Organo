@@ -5,12 +5,12 @@ import Time from './components/Time';
 import Footer from './components/Footer';
 
 function App() {
-  const times = [
-    { nome: 'Front-End', secondaryColor: '#D9F7E9', primaryColor: '#57C278' },
-    { nome: 'Back-End', secondaryColor: '#E8F8FF', primaryColor: '#82CFFA' },
-    { nome: 'QA', secondaryColor: '#F0F8E2', primaryColor: '#A6D157' },
-    { nome: 'OTM', secondaryColor: '#FDE7E8', primaryColor: '#E06B69' },
-  ]
+  const [times, setTimes] = useState([
+    { nome: 'Front-End',  color: '#57C278' },
+    { nome: 'Back-End',  color: '#82CFFA' },
+    { nome: 'QA',  color: '#A6D157' },
+    { nome: 'OTM',  color: '#E06B69' },
+  ])
 
   const [colaboradores, setColaboradores] = useState([])
 
@@ -18,17 +18,31 @@ function App() {
     setColaboradores([...colaboradores, e])
   }
 
+  function deletandoColaborador() {
+    console.log('deletando colabor')
+  }
+
+  function mudarCorDoTime(cor, nome) {
+    setTimes(times.map(time => {
+      if (time.nome === nome) {
+        time.color = cor;
+      }
+      return time;
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
       <Formulario times={times.map(item => item.nome)} aoColaboradorCadastrado={colaborador => onNewRegistrer(colaborador)} />
-      {times.map(time =>
+      {times.map((time, index) =>
         <Time
-          key={time.name}
+          mudarCor={mudarCorDoTime}
+          key={index}
           nome={time.nome}
-          primaryColor={time.primaryColor}
-          secondaryColor={time.secondaryColor}
+          color={time.color}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          aoDeletar={deletandoColaborador}
         />
       )}
       <Footer />
