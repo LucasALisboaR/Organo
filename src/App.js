@@ -138,9 +138,9 @@ function App() {
     console.log('deletando colabor')
   }
 
-  function mudarCorDoTime(cor, nome) {
+  function mudarCorDoTime(cor, id) {
     setTimes(times.map(time => {
-      if (time.nome === nome) {
+      if (time.nome === id) {
         time.color = cor;
       }
       return time;
@@ -154,7 +154,7 @@ function App() {
       {times.map((time, index) =>
         <Time
           mudarCor={mudarCorDoTime}
-          key={index}
+          key={time.id}
           nome={time.nome}
           color={time.color}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
