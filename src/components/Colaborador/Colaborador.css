@@ -1,6 +1,10 @@
+    .all-card{
+        position: relative;
+    }
+    
     .card {
         width: 260px;
-        min-height: 270px;
+        height: 270px;
         border-radius: 10px;
     }
 
@@ -25,18 +29,8 @@
         color: #212121;
     }
 
-    .deletar {
-        margin: 10px 0;
-        width: 90%;
-        border: none;
-        border-radius: 10px;
-        height: 30px;
-        font-size: 18px;
-        font-weight: 400;
-        background-color: rgba(255, 0, 0, 0.5);
-        cursor: pointer;
-        
-        &:hover{
-            font-size: 20px;
-        }
+    .icon-close{
+        position: absolute;
+        right: -18px;
+        top: -15px;
     }

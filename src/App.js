@@ -134,13 +134,15 @@ function App() {
     setColaboradores([...colaboradores, e])
   }
 
-  function deletandoColaborador() {
-    console.log('deletando colabor')
+  function deletandoColaborador(id) {
+    console.log('deletando colabor', id)
   }
 
   function mudarCorDoTime(cor, id) {
+    console.log('🚀 ~ mudarCorDoTime ~ id:', id)
     setTimes(times.map(time => {
-      if (time.nome === id) {
+      console.log('🚀 ~ mudarCorDoTime ~ time:', time)
+      if (time.id === id) {
         time.color = cor;
       }
       return time;
@@ -155,6 +157,7 @@ function App() {
         <Time
           mudarCor={mudarCorDoTime}
           key={time.id}
+          id={time.id}
           nome={time.nome}
           color={time.color}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
