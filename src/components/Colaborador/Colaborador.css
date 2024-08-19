@@ -34,3 +34,8 @@
         right: -18px;
         top: -15px;
     }
+    .icon-favorite{
+        position: absolute;
+        left: 8px;
+        top: 10px;
+    }

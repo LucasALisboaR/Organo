@@ -3,7 +3,7 @@ import Colaborador from '../Colaborador';
 import hexToRgba from 'hex-to-rgba';
 
 const Time = ({ mudarCor, id, nome, color, colaboradores, aoDeletar }) => {
-
+    
     return (
         (colaboradores.length) > 0 ? <section className='time' style={{ backgroundColor: hexToRgba(color, '0.6')}}>
             <input type='color' className='input-color' value={color} onChange={evento => mudarCor(evento.target.value, id)} />
