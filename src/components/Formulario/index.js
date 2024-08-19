@@ -73,6 +73,7 @@ const Formulario = (props) => {
                     label="Cor"
                     placeholder="Escolha a cor do time"
                     valor={corTime}
+                    type="color"
                     aoAlterado={valor => setCorTime(valor)} />
                 <Botao>
                     Criar time

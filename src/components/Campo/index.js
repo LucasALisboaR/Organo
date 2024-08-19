@@ -3,11 +3,11 @@ const Campo = (props) => {
     const change = (e) => {
         props.aoAlterado(e.target.value)
     }
-
-    return(
-        <div className="campo-texto">
+    let typeInput = props.type ? props.type : 'text';
+    return (
+        <div className={`campo campo-${typeInput}`}>
             <label>{props.label}</label>
-            <input value={props.valor} onChange={change} required={props.required} placeholder={props.placeholder} name="nome"/>
+            <input type={typeInput} value={props.valor} onChange={change} required={props.required} placeholder={props.placeholder} name="nome" />
         </div>
     )
 }
