@@ -2,7 +2,7 @@ import './Time.css'
 import Colaborador from '../Colaborador';
 import hexToRgba from 'hex-to-rgba';
 
-const Time = ({ mudarCor, id, nome, color, colaboradores, aoDeletar }) => {
+const Time = ({ mudarCor, id, nome, color, colaboradores, aoDeletar, aoFavoritar }) => {
     
     return (
         (colaboradores.length) > 0 ? <section className='time' style={{ backgroundColor: hexToRgba(color, '0.6')}}>
@@ -15,6 +15,7 @@ const Time = ({ mudarCor, id, nome, color, colaboradores, aoDeletar }) => {
                         colaborador={colaborador}
                         cor={color}
                         aoDeletar={aoDeletar}
+                        aoFavoritar={aoFavoritar}
                     />
                 }
                 )}

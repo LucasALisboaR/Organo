@@ -1,7 +1,7 @@
-    .all-card{
+    .all-card {
         position: relative;
     }
-    
+
     .card {
         width: 260px;
         height: 270px;
@@ -29,13 +29,16 @@
         color: #212121;
     }
 
-    .icon-close{
+    .icon-close {
         position: absolute;
         right: -18px;
         top: -15px;
+        cursor: pointer;
     }
-    .icon-favorite{
+
+    .icon-favorite {
         position: absolute;
         left: 8px;
         top: 10px;
+        cursor: pointer;
     }
